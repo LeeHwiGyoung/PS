@@ -3,7 +3,7 @@ function solution(s) {
     let str_arr = s.replace("{{", "").replace("}}", "").split("},{");
     let arr = [];
     
-    str_arr.forEach((el,idx)=>{
+    str_arr.forEach((el)=>{
        arr.push(el.split(","));
     })
     
@@ -14,23 +14,15 @@ function solution(s) {
             return 1;
     });
 
+    answer.push(Number(arr[0]));
     
-   
-    arr.filter((el,idx)=>{
-        for(let i = 0 ; i <= el[idx].length ; i++){
-            if(!answer.includes(el[idx][i])){
-                answer.push(Number(el[idx][i]));
-                return 1;
+    arr.forEach((el)=>{
+        for(let i = 0 ; i < el.length ;i++){
+            if(!answer.includes(Number(el[i]))){
+                answer.push(Number(el[i]));
             }
-            else
-                return -1;
         }
     })
-    
- //마지막 다시하기
-  
-    
-    
-
+   
     return answer;
 }
