@@ -1,0 +1,5 @@
+num = int(input())
+divisor = list(map(int , input().split()))
+max = max(divisor)
+min = min(divisor)
+print(max * min)
