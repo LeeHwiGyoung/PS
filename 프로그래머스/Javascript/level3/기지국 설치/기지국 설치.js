@@ -1,6 +1,4 @@
-/*
-    누적합 방식으로 포문 한 번 사용
-*/
+
 function solution(n, stations, w) {
     var answer = 0;
     let current = 0;
