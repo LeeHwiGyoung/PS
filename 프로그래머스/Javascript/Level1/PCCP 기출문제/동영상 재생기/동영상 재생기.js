@@ -3,7 +3,7 @@ function solution(video_len, pos, op_start, op_end, commands) {
   function change_format_to_sec(time) {
     return Number(time.slice(0, 2)) * 60 + Number(time.slice(-2));
   }
-
+  //sec 단위의 입력을 "mm:ss"의 형식으로 바꿔주는 함수
   function change_format_to_time(total_sec) {
     let min = Math.floor(total_sec / 60);
     let sec = total_sec % 60;
